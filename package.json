@@ -1,0 +1,38 @@
+{
+    "name": "taskbar_manager",
+    "description": "taskbar_manager",
+    "author": {
+        "name": "Kangping"
+    },
+    "version": "1.0.0",
+    "dependencies": {
+        "@types/node": "^20.3.1"
+    },
+    "main": "bin/index.js",
+    "scripts": {
+        "start": "npx electron ."
+    },
+    "build": {
+        "appId": "com.electron.taskbar_manager",
+        "directories": {
+            "output": "dist"
+        },
+        "files": [
+            "bin",
+            "package.json",
+            "package-lock.json"
+        ],
+        "win": {
+            "icon": "icon.ico",
+            "target": "nsis"
+        },
+        "nsis": {
+            "oneClick": false,
+            "allowToChangeInstallationDirectory": true
+        }
+    },
+    "devDependencies": {
+        "electron": "^26.0.0",
+        "electron-builder": "^24.6.3"
+    }
+}

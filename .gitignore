@@ -1,0 +1,6 @@
+.vscode
+bin/regs/*
+src
+node_modules
+package-lock.json
+dist
