@@ -51,13 +51,9 @@ electron_1.app.on("window-all-closed", () => {
         electron_1.app.quit();
 });
 function _export(name, event) {
-    if (fs.existsSync(path.join(__dirname, "./regs/", name))) {
-        if (fs.statSync(path.join(__dirname, "./regs/", name)).isFile()) {
-            fs.unlinkSync(path.join(__dirname, "./regs/", name));
-        }
-    }
     child_process.exec("powershell REG export HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Taskband " +
-        path.join(__dirname, "./regs/", name), (error, stdout, stderr) => {
+        path.join(__dirname, "./regs/", name) +
+        " /y", (error, stdout, stderr) => {
         if (error) {
             return "e";
         }

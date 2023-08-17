@@ -4,7 +4,7 @@
     "author": {
         "name": "Kangping"
     },
-    "version": "1.0.0",
+    "version": "1.0.1",
     "dependencies": {
         "@types/node": "^20.3.1"
     },
@@ -29,7 +29,8 @@
         "nsis": {
             "oneClick": false,
             "allowToChangeInstallationDirectory": true
-        }
+        },
+        "asar": false
     },
     "devDependencies": {
         "electron": "^26.0.0",

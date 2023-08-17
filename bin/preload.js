@@ -7,6 +7,9 @@ window.onload = () => {
     electron_1.ipcRenderer.on("response", (event, arg) => {
         regFiles = JSON.parse(arg);
         draw();
+        let elm = document.createElement("span");
+        elm.innerText = __dirname;
+        document.body.appendChild(elm);
     });
     function _import(file) {
         electron_1.ipcRenderer.send("message", JSON.stringify(["import", file]));

@@ -1,6 +1,5 @@
 .vscode
-bin/regs/*
-src
+bin
 node_modules
 package-lock.json
 dist
